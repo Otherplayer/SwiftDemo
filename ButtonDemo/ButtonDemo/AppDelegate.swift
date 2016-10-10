@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SwiftDemo
+//  ButtonDemo
 //
 //  Created by __无邪_ on 2016/10/10.
 //  Copyright © 2016年 __无邪_. All rights reserved.
