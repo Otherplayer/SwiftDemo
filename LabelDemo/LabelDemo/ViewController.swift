@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         label.isUserInteractionEnabled = true
 //        label.isMultipleTouchEnabled = true
 //        label.isExclusiveTouch = true
-        let tapGesture = UIGestureRecognizer.init(target: self, action: #selector(tap(sender:)))
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(tap(sender:)))
         label.addGestureRecognizer(tapGesture)
         
         
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 
     
     func tap(sender:UILabel) {
-        NSLog("title is \("ss")")
+        NSLog("title is \(sender)")
     }
     
     
