@@ -1,3 +1,3 @@
 # SwiftDemo
 
-### Swift 3.0 learning
+### Swift 3.x learning
