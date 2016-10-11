@@ -51,6 +51,9 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
         
         self.collectionView.reloadData()
         
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
