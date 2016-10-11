@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 let Identifier = "Identifier"
 
 class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDataSourcePrefetching{
@@ -29,7 +30,6 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
         self.datas = NSMutableArray.init()
         for  i in 1...100 {
             self.datas.add(i)
-            NSLog("\(i)")
         }
         
         let layout = UICollectionViewFlowLayout()
@@ -47,7 +47,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
         self.collectionView.dataSource = self
         self.collectionView.prefetchDataSource = self
         
-        self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Identifier)
+        self.collectionView.register(HNACollectionViewCell.self, forCellWithReuseIdentifier: Identifier)
         
         self.collectionView.reloadData()
         
@@ -69,14 +69,18 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier, for: indexPath) as! HNACollectionViewCell
         cell.backgroundColor = UIColor.lightGray
+        cell.titleLabel.text = NSString.init(format: "\(self.datas[indexPath.row])" as NSString) as String
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]){
         NSLog("===== \(indexPaths)")
     }
+    
+    
+    
 
 
 }

@@ -12,6 +12,7 @@
 		631891361DAC853B00EBA1B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631891341DAC853B00EBA1B3 /* Main.storyboard */; };
 		631891381DAC853B00EBA1B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631891371DAC853B00EBA1B3 /* Assets.xcassets */; };
 		6318913B1DAC853B00EBA1B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631891391DAC853B00EBA1B3 /* LaunchScreen.storyboard */; };
+		631891431DACCBAE00EBA1B3 /* HNACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631891421DACCBAE00EBA1B3 /* HNACollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		631891371DAC853B00EBA1B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6318913A1DAC853B00EBA1B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6318913C1DAC853B00EBA1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631891421DACCBAE00EBA1B3 /* HNACollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNACollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				631891301DAC853B00EBA1B3 /* AppDelegate.swift */,
 				631891321DAC853B00EBA1B3 /* ViewController.swift */,
+				631891421DACCBAE00EBA1B3 /* HNACollectionViewCell.swift */,
 				631891341DAC853B00EBA1B3 /* Main.storyboard */,
 				631891371DAC853B00EBA1B3 /* Assets.xcassets */,
 				631891391DAC853B00EBA1B3 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631891431DACCBAE00EBA1B3 /* HNACollectionViewCell.swift in Sources */,
 				631891331DAC853B00EBA1B3 /* ViewController.swift in Sources */,
 				631891311DAC853B00EBA1B3 /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				631891411DAC853B00EBA1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
