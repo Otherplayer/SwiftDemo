@@ -10,12 +10,14 @@ import UIKit
 import Foundation
 
 
+let kTableTitleViewHeight:CGFloat = 60
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
     
     @IBOutlet weak var editBtn: UIBarButtonItem!
     let identifier = "identifier"
+    let identifierCustom = "identifierCustom"
     var tableView : UITableView!
     var datas : NSMutableArray!
     
@@ -24,7 +26,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.datas = NSMutableArray.init(array: ["a","b","c","d"])
+        self.datas = NSMutableArray.init(array: ["a","b","c","d","e","f"])
         
         let size = UIScreen.main.bounds.size
         
@@ -37,6 +39,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         self.tableView.reloadData()
         
+        
+        
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: size.width, height: 100))
+        headerView.backgroundColor = UIColor.darkGray
+        
+        self.tableView.tableHeaderView = headerView
         
         
     }
@@ -74,9 +82,25 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         return cell
     }
     
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return kTableTitleViewHeight
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: kTableTitleViewHeight))
+        header.backgroundColor = UIColor.lightGray
+        return header
+    }
+    
+    
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("did selected at index : \(indexPath.row) ,result : \(self.datas[indexPath.row])")
     }
+    
     
     public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
