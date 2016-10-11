@@ -29,6 +29,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource,UICollectionV
         self.datas = NSMutableArray.init()
         for  i in 1...100 {
             self.datas.add(i)
+            NSLog("\(i)")
         }
         
         let layout = UICollectionViewFlowLayout()
