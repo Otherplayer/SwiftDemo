@@ -57,7 +57,27 @@ class ViewController: UIViewController {
         
         
         
-        func makeIncrementor(forIncrement amount: Int) -> () -> Int {//返回值是一个()-> Int的函数
+//        func makeIncrementor(forIncrement amount: Int) -> () -> Int {//返回值是一个()-> Int的函数
+//            var runningTotal = 0
+//            func incrementor() -> Int {
+//                runningTotal += amount
+//                return runningTotal
+//            }
+//            return incrementor
+//        }
+//        
+//        let incrementByTen = makeIncrementor(forIncrement: 10)
+//        
+//        // 返回的值为10
+//        print(incrementByTen())
+//        
+//        // 返回的值为20
+//        print(incrementByTen())
+//        
+//        // 返回的值为30
+//        print(incrementByTen())
+        
+        func makeIncrementor(forIncrement amount: Int) -> () -> Int {
             var runningTotal = 0
             func incrementor() -> Int {
                 runningTotal += amount
@@ -69,13 +89,21 @@ class ViewController: UIViewController {
         let incrementByTen = makeIncrementor(forIncrement: 10)
         
         // 返回的值为10
-        print(incrementByTen())
+        incrementByTen()
         
         // 返回的值为20
-        print(incrementByTen())
+        incrementByTen()
         
         // 返回的值为30
-        print(incrementByTen())
+        incrementByTen()
+        
+        // 返回的值为40
+        incrementByTen()
+        
+        let alsoIncrementByTen = incrementByTen
+        
+        // 返回的值也为50
+        print(alsoIncrementByTen())
         
         
         
