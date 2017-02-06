@@ -16,7 +16,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        DispatchQueue.global().async {
+            print("开始执行异步任务")
+            Thread.sleep(forTimeInterval: 2)
+            print("异步任务执行完毕")
+            DispatchQueue.main.async {
+                print("回到UI线程")
+            }
+        }
+        
+        //延时1秒执行
+        let time: TimeInterval = 1.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+            //code
+            print("1 秒后输出")
+        }
+        
     }
+    
+    
     
     
     override func viewDidAppear(_ animated: Bool) {

@@ -40,7 +40,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         self.tableView.reloadData()
         
         
-        
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: size.width, height: 100))
         headerView.backgroundColor = UIColor.darkGray
         
